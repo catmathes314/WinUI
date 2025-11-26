@@ -1,0 +1,93 @@
+# Build files
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# Visual Studio cache
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Temporary files
+*.tmp
+*.temp
+
+# System files
+Thumbs.db
+desktop.ini
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.Backup
+*.orig
+*.tmp
+
+# Local publish artifacts
+publish/
+*.publishsettings
+
+# Rider / Jetbrains
+.idea/
+*.iml
+
+# MS Build
+msbuild.log
+msbuild.binlog
+
+# .NET generated files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.db
+*.lib
+
+# XAML designer generated
+*.g.cs
+*.g.i.cs
+*/**/Generated/
+
+# Windows App Packaging
+AppPackages/
+BundleArtifacts/
+Appx*/ 
+*.appx
+*.appxbundle
+*.appxupload
+*.msix
+*.msixbundle
+*.msixupload
+
+# Windows Certs
+*.pfx
+*.p12
+
+# Local app config (optional, keep if sensitive values)
+appsettings.*.json
+
+# SQLite local DB (if your app generates them)
+*.db-shm
+*.db-wal
+*.sqlite
+*.db3
+
+# Crash & dump files
+*.dmp
+
+# Other IDEs
+*.ionide

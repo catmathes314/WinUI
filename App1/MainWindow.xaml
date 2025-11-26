@@ -7,38 +7,31 @@
     mc:Ignorable="d"
     Title="Calculator">
 
-    <!-- 外層只負責佔滿視窗、當背景 -->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <!-- 內層這個 Grid 才是真正的畫面，固定寬度、置中 -->
         <Grid HorizontalAlignment="Center"
               VerticalAlignment="Center"
               Width="360"
               Padding="16">
 
-            <!-- 資源放這裡 -->
             <Grid.Resources>
 
-                <!-- 一般按鈕樣式 -->
                 <Style x:Key="CalcButtonStyle" TargetType="Button">
                     <Setter Property="Margin" Value="4"/>
                     <Setter Property="FontSize" Value="20"/>
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
                     <Setter Property="VerticalAlignment" Value="Stretch"/>
                     <Setter Property="CornerRadius" Value="8"/>
-                    <!-- 明確指定顏色，避免變成白字配很淡的底色 -->
                     <Setter Property="Background" Value="#FFE5E5E5"/>
                     <Setter Property="Foreground" Value="#FF222222"/>
                 </Style>
 
-                <!-- 運算子按鈕 -->
                 <Style x:Key="OperatorButtonStyle" TargetType="Button"
                        BasedOn="{StaticResource CalcButtonStyle}">
                     <Setter Property="Background" Value="#FFD7E3FF"/>
                     <Setter Property="FontWeight" Value="SemiBold"/>
                 </Style>
 
-                <!-- 等號按鈕 -->
                 <Style x:Key="EqualButtonStyle" TargetType="Button"
                        BasedOn="{StaticResource CalcButtonStyle}">
                     <Setter Property="Background" Value="#FF4C6FFF"/>
@@ -53,7 +46,6 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- 顯示區 -->
             <Border Grid.Row="0"
                     Background="#FF222222"
                     CornerRadius="12"
@@ -67,7 +59,6 @@
                            VerticalAlignment="Bottom"/>
             </Border>
 
-            <!-- 按鈕區 -->
             <Border Grid.Row="1"
                     CornerRadius="12"
                     Background="#FFF3F3F3"

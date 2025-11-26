@@ -13,7 +13,7 @@ using WinRT.Interop;
 // Integers can only be displayed in 6 digits.
 // ================================
 
-namespace WinUIApp1
+namespace App1
 {
     public sealed partial class MainWindow : Window
     {
@@ -27,11 +27,11 @@ namespace WinUIApp1
         {
             this.InitializeComponent();
 
-            // 設定視窗大小（例如 360 x 600）
+            // Window size
             var hWnd = WindowNative.GetWindowHandle(this);
             var windowId = Win32Interop.GetWindowIdFromWindow(hWnd);
             var appWindow = AppWindow.GetFromWindowId(windowId);
-            appWindow.Resize(new SizeInt32(360, 600));
+            appWindow.Resize(new SizeInt32(400, 600));
 
             DisplayText.Text = "0";
             WireUpButtons();
@@ -40,7 +40,6 @@ namespace WinUIApp1
 
         void WireUpButtons()
         {
-            // 在 WinUI 中，用 ButtonsGrid.Children 取代 WinForms 的 flowBasic.Controls
             foreach (var child in ButtonsGrid.Children)
             {
                 if (child is not Button btn) continue;

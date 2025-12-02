@@ -16,7 +16,7 @@ using Windows.Graphics;
 using WinRT.Interop;
 
 
-namespace App1
+namespace WinUICalculator
 {
     public sealed partial class MainWindow : Window
     {

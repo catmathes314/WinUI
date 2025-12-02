@@ -1,3 +1,12 @@
+// MainWindow.xaml.cs
+
+
+// ================================
+// haven't multiplication and division before addition and subtraction.
+// repeated "=" not works.
+// Numerical display needs optimization.
+// ================================
+
 using System;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
@@ -6,12 +15,6 @@ using Microsoft.UI.Xaml.Controls;
 using Windows.Graphics;
 using WinRT.Interop;
 
-
-// ================================
-// haven't multiplication and division before addition and subtraction.
-// repeated "=" not works
-// Integers can only be displayed in 6 digits.
-// ================================
 
 namespace App1
 {
@@ -31,7 +34,7 @@ namespace App1
             var hWnd = WindowNative.GetWindowHandle(this);
             var windowId = Win32Interop.GetWindowIdFromWindow(hWnd);
             var appWindow = AppWindow.GetFromWindowId(windowId);
-            appWindow.Resize(new SizeInt32(400, 600));
+            appWindow.Resize(new SizeInt32(450, 600));
 
             DisplayText.Text = "0";
             WireUpButtons();
